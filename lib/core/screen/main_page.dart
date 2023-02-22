@@ -15,7 +15,6 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   final db = di.get<DatabaseHelper>();
   final controller = TextEditingController();
-  final dialogController = GFBottomSheetController();
   var words = <WordModel>[];
   var isUz = false;
 
@@ -126,8 +125,7 @@ class _MainPageState extends State<MainPage> {
                             isUz ? words[i].uzbek : words[i].english,
                             style: const TextStyle(fontSize: 24),
                           ),
-                        )
-                    );
+                        ));
                   },
                 );
               }),
